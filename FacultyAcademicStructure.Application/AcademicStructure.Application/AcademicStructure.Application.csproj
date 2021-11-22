@@ -4,4 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\FacultyAcademicStructure.Domain\AcademicStructure.Domain\AcademicStructure.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
