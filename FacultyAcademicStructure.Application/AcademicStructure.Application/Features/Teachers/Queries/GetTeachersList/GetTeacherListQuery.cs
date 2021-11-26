@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace AcademicStructure.Application.Features.Teacher.Queries.GetTeacherList
+namespace AcademicStructure.Application.Features.Teachers.Queries.GetTeachersList
 {
     public class GetTeacherListQuery : IRequest<List<TeacherVm>>
     {

@@ -1,21 +1,24 @@
 ﻿using AcademicStructure.Domain.Common;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace AcademicStructure.Domain.Entities
 {
     public class Student : EntityBase
     {
-        //public int StudentId { get; set; }
-
+        public int Id { get; set; }
+        public string FullName { get; set; }
+        public string CPF { get; set; }
+        public string Email { get; set; }
+        public DateTime DataCadastro { get; set; }
+        public bool StudentOrTeacher { get; set; }
+        public long PhoneNumber { get; set; }
+        public DateTime Birthday { get; set; }
+        public Address Address { get; set; }
         public int Matricula { get; set; }
-
         public bool Ativo { get; set; }
-        List<Teacher> TeacherList { get; set; }
         public IEnumerable<ClassRoom> ClassRooms { get; set; }
-
+        public IEnumerable<Teacher> Teachers { get; set; }
     }
 }

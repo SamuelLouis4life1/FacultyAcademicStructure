@@ -1,11 +1,11 @@
 ﻿using AcademicStructure.Domain.Common;
+using MediatR;
 using System;
-using System.Collections.Generic;
 
 
-namespace AcademicStructure.Domain.Entities
+namespace AcademicStructure.Application.Features.Teachers.Commands.UpdateTeacher
 {
-    public class Teacher : EntityBase
+    public class UpdateTeacherCommand : IRequest
     {
         public int Id { get; set; }
         public string FullName { get; set; }
@@ -18,8 +18,5 @@ namespace AcademicStructure.Domain.Entities
         public Address Address { get; set; }
         public int Matricula { get; set; }
         public bool Ativo { get; set; }
-        public IEnumerable<ClassRoom> ClassRooms { get; set; }
-        public IEnumerable<Student> Student { get; set; }
-
     }
 }

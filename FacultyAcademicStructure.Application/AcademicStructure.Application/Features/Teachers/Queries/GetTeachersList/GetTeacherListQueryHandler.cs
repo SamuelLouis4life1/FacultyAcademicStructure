@@ -3,11 +3,10 @@ using AutoMapper;
 using MediatR;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AcademicStructure.Application.Features.Teacher.Queries.GetTeacherList
+namespace AcademicStructure.Application.Features.Teachers.Queries.GetTeachersList
 {
     public class GetTeacherListQueryHandler : IRequestHandler<GetTeacherListQuery, List<TeacherVm>>
     {
@@ -25,6 +24,5 @@ namespace AcademicStructure.Application.Features.Teacher.Queries.GetTeacherList
             var teacherList = await _teacherRepository.GetTeacherByName(request.TeacherName);
             return _mapper.Map<List<TeacherVm>>(teacherList);
         }
-
     }
 }

@@ -6,10 +6,11 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AcademicStructure.Application.Features.Student.Queries.GetStudentList
+namespace AcademicStructure.Application.Features.Students.Queries.GetTeachersList
 {
     public class GetStudentListQueryHandler : IRequestHandler<GetStudentListQuery, List<StudentVm>>
     {
+
         private readonly IStudentRepository _studentRepository;
         private readonly IMapper _mapper;
 
@@ -24,6 +25,5 @@ namespace AcademicStructure.Application.Features.Student.Queries.GetStudentList
             var studentList = await _studentRepository.GetStudentsByName(request.StudentName);
             return _mapper.Map<List<StudentVm>>(studentList);
         }
-
     }
 }

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace AcademicStructure.Application.Features.Student.Queries.GetStudentList
+namespace AcademicStructure.Application.Features.Students.Queries.GetTeachersList
 {
     public class GetStudentListQuery : IRequest<List<StudentVm>>
     {
@@ -13,6 +13,5 @@ namespace AcademicStructure.Application.Features.Student.Queries.GetStudentList
         {
             StudentName = studentName ?? throw new ArgumentNullException(nameof(studentName));
         }
-
     }
 }

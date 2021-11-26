@@ -1,13 +1,13 @@
 ﻿using AcademicStructure.Application.Features.ClassRoom.Queries.GetClassRoomList;
-using AcademicStructure.Application.Features.Student.Queries.GetStudentList;
-using AcademicStructure.Application.Features.Teacher.Queries.GetTeacherList;
+using AcademicStructure.Application.Features.Teachers.Commands.CheckoutTeacher;
+using AcademicStructure.Application.Features.Teachers.Commands.UpdateTeacher;
 using AcademicStructure.Domain.Entities;
 using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AcademicStructure.Application.Features.Teachers.Queries.GetTeachersList;
+using AcademicStructure.Application.Features.Students.Queries.GetTeachersList;
+using AcademicStructure.Application.Features.Students.Commands.UpdateStudent;
+using AcademicStructure.Application.Features.Students.Commands.CheckoutStudent;
+using AcademicStructure.Application.Features.ClassRoom.Commands.CheckoutClassRoom;
 
 namespace AcademicStructure.Application.Mappings
 {
@@ -17,13 +17,19 @@ namespace AcademicStructure.Application.Mappings
         {
             // Students
             CreateMap<Student, StudentVm>().ReverseMap();
+            CreateMap<Student, StudentCommand>().ReverseMap();
+            CreateMap<Student, UpdateStudentCommand>().ReverseMap();
 
             // Teacher
             CreateMap<Teacher, TeacherVm>().ReverseMap();
+            CreateMap<Teacher, TeacherCommand>().ReverseMap();
+            CreateMap<Teacher, UpdateTeacherCommand>().ReverseMap();
 
 
             // ClassRoom
             CreateMap<ClassRoom, ClassRoomVm>().ReverseMap();
+            CreateMap<ClassRoom, CheckoutClassRoomCommand>().ReverseMap();
+            //CreateMap<ClassRoom, UpdateClassRoomCommand>().ReverseMap();
         }
     }
 }

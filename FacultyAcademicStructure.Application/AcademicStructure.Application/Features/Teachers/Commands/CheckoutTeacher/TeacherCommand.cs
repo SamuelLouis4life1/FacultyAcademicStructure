@@ -1,13 +1,12 @@
 ﻿using AcademicStructure.Domain.Common;
+using MediatR;
 using System;
-using System.Collections.Generic;
 
 
-namespace AcademicStructure.Domain.Entities
+namespace AcademicStructure.Application.Features.Teachers.Commands.CheckoutTeacher
 {
-    public class Teacher : EntityBase
+    public class TeacherCommand : IRequest<int>
     {
-        public int Id { get; set; }
         public string FullName { get; set; }
         public string CPF { get; set; }
         public string Email { get; set; }
@@ -18,8 +17,5 @@ namespace AcademicStructure.Domain.Entities
         public Address Address { get; set; }
         public int Matricula { get; set; }
         public bool Ativo { get; set; }
-        public IEnumerable<ClassRoom> ClassRooms { get; set; }
-        public IEnumerable<Student> Student { get; set; }
-
     }
 }

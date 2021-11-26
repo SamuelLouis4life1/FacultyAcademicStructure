@@ -1,14 +1,13 @@
 ﻿using AcademicStructure.Domain.Common;
+using MediatR;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace AcademicStructure.Application.Features.Student.Queries.GetStudentList
+
+namespace AcademicStructure.Application.Features.Students.Commands.UpdateStudent
 {
-    public class StudentVm
+    public class UpdateStudentCommand : IRequest
     {
+        public int Id { get; set; }
         public string FullName { get; set; }
         public string CPF { get; set; }
         public string Email { get; set; }
@@ -16,7 +15,8 @@ namespace AcademicStructure.Application.Features.Student.Queries.GetStudentList
         public bool StudentOrTeacher { get; set; }
         public long PhoneNumber { get; set; }
         public DateTime Birthday { get; set; }
-        public DateTime? LastModifiedDate { get; set; }
         public Address Address { get; set; }
+        public int Matricula { get; set; }
+        public bool Ativo { get; set; }
     }
 }

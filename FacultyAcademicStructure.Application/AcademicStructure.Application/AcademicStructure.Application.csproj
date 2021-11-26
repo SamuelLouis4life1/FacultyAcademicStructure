@@ -9,18 +9,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Contracts\Infrastructure\" />
-    <Folder Include="Features\ClassRoom\Commands\" />
-    <Folder Include="Features\Student\Commands\" />
-    <Folder Include="Features\Teacher\Commands\" />
-    <Folder Include="Models\" />
+    <Folder Include="Features\ClassRoom\Commands\UpdateClassRoom\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Behaviours\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="FluentValidation" Version="10.3.4" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
   </ItemGroup>
 
 </Project>
