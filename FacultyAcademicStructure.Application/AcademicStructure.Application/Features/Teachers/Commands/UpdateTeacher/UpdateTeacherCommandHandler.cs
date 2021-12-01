@@ -1,4 +1,5 @@
 ﻿using AcademicStructure.Application.Contracts.Persistence;
+using AcademicStructure.Application.Exceptions;
 using AcademicStructure.Domain.Entities;
 using AutoMapper;
 using MediatR;
