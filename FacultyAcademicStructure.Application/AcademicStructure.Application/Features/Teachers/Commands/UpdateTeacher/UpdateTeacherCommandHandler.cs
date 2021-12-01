@@ -27,7 +27,7 @@ namespace AcademicStructure.Application.Features.Teachers.Commands.UpdateTeacher
             var teacherToUpdate = await _teacherRepository.GetByIdAsync(request.Id);
             if (teacherToUpdate == null)
             {
-                //throw new NotFoundException(nameof(Teacher), request.Id);
+                throw new NotFoundException(nameof(Teacher), request.Id);
             }
 
             _mapper.Map(request, teacherToUpdate, typeof(UpdateTeacherCommand), typeof(Teacher));

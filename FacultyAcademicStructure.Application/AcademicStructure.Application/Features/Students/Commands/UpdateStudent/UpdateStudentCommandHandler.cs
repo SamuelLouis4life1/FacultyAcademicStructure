@@ -1,4 +1,5 @@
 ﻿using AcademicStructure.Application.Contracts.Persistence;
+using AcademicStructure.Application.Exceptions;
 using AcademicStructure.Domain.Entities;
 using AutoMapper;
 using MediatR;
@@ -27,7 +28,7 @@ namespace AcademicStructure.Application.Features.Students.Commands.UpdateStudent
             var studentToUpdate = await _studentRepository.GetByIdAsync(request.Id);
             if (studentToUpdate == null)
             {
-               // throw new NotFoundException(nameof(Student), request.Id);
+                throw new NotFoundException(nameof(Student), request.Id);
             }
 
             _mapper.Map(request, studentToUpdate, typeof(UpdateStudentCommand), typeof(Student));

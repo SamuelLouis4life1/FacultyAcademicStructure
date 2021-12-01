@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="Features\ClassRoom\Commands\UpdateClassRoom\" />
-    <Folder Include="Exceptions\" />
     <Folder Include="Behaviours\" />
   </ItemGroup>
 
