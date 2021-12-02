@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace AcademicStructure.Application.Features.ClassRoom.Queries.GetClassRoomList
+namespace AcademicStructure.Application.Features.ClassRooms.Queries.GetClassRoomList
 {
     public class GetClassRoomListQuery : IRequest<List<ClassRoomVm>>
     {

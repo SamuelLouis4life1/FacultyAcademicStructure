@@ -1,14 +1,12 @@
 ﻿using AcademicStructure.Application.Contracts.Persistence;
 using AutoMapper;
 using MediatR;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AcademicStructure.Application.Features.ClassRoom.Queries.GetClassRoomList
+
+namespace AcademicStructure.Application.Features.ClassRooms.Queries.GetClassRoomList
 {
     public class GetClassRoomListQueryHandler : IRequestHandler<GetClassRoomListQuery, List<ClassRoomVm>>
     {
@@ -17,8 +15,8 @@ namespace AcademicStructure.Application.Features.ClassRoom.Queries.GetClassRoomL
 
         public GetClassRoomListQueryHandler(IClassRoomRepository classRoomRepository, IMapper mapper)
         {
-            _classRoomRepository = classRoomRepository ?? throw new ArgumentNullException(nameof(classRoomRepository));
-            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
+            _classRoomRepository = classRoomRepository;
+            _mapper = mapper;
         }
 
         public async Task<List<ClassRoomVm>> Handle(GetClassRoomListQuery request, CancellationToken cancellationToken)
