@@ -11,7 +11,7 @@ namespace AcademicStructure.Infrastructure.Repositories
 {
     public class ClassRoomRepository : RepositoryBase<ClassRoom>, IClassRoomRepository
     {
-        public ClassRoomRepository(ApplicationDataBContext dbContext) : base(dbContext)
+        public ClassRoomRepository(ApplicationDbContext dbContext) : base(dbContext)
         {
         }
 

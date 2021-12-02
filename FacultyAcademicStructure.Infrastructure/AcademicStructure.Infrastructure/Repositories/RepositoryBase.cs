@@ -12,9 +12,9 @@ namespace AcademicStructure.Infrastructure.Repositories
 {
     public class RepositoryBase<T> : IAsyncRepository<T> where T : EntityBase
     {
-        protected readonly ApplicationDataBContext _dbContext;
+        protected readonly ApplicationDbContext _dbContext;
 
-        public RepositoryBase(ApplicationDataBContext dbContext)
+        public RepositoryBase(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }

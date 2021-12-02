@@ -11,7 +11,7 @@ namespace AcademicStructure.Infrastructure.Repositories
 {
     public class StudentRepository : RepositoryBase<Student>, IStudentRepository
     {
-        public StudentRepository(ApplicationDataBContext dbContext) : base(dbContext)
+        public StudentRepository(ApplicationDbContext dbContext) : base(dbContext)
         {
         }
 

@@ -15,8 +15,11 @@ namespace AcademicStructure.Infrastructure
     {
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<ApplicationDataBContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("ApplicationConnectionString")));
+            services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseSqlServer(configuration.GetConnectionString("ApplicationConnectionString")));
+
+            //services.AddDbContext<ApplicationDbContext>();
+
 
             services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));
             services.AddScoped<ITeacherRepository, TeacherRepository>();

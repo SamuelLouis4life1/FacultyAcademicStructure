@@ -9,7 +9,7 @@ namespace AcademicStructure.Infrastructure.Persistence
 {
     public class ApplicationContextSeed
     {
-        public static async Task SeedAsync(ApplicationDataBContext applicationDbContext, ILogger<ApplicationContextSeed> logger)
+        public static async Task SeedAsync(ApplicationDbContext applicationDbContext, ILogger<ApplicationContextSeed> logger)
         {
             if (!applicationDbContext.DbStudents.Any() || 
                 applicationDbContext.DbTeachers.Any() || 
@@ -20,7 +20,7 @@ namespace AcademicStructure.Infrastructure.Persistence
                 applicationDbContext.DbClassRooms.AddRange(GetPreconfiguredClassRooms());
                 await applicationDbContext.SaveChangesAsync();
 
-                logger.LogInformation("Seed database associated with context {DbContextName}", typeof(ApplicationDataBContext).Name);
+                logger.LogInformation("Seed database associated with context {DbContextName}", typeof(ApplicationDbContext).Name);
             }
         }
 

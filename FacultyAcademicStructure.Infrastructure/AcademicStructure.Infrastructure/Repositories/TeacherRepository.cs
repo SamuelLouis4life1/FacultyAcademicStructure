@@ -11,7 +11,7 @@ namespace AcademicStructure.Infrastructure.Repositories
 {
     public class TeacherRepository : RepositoryBase<Teacher>, ITeacherRepository
     {
-        public TeacherRepository(ApplicationDataBContext dbContext) : base(dbContext)
+        public TeacherRepository(ApplicationDbContext dbContext) : base(dbContext)
         {
         }
 

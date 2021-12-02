@@ -1,6 +1,6 @@
 ﻿namespace AcademicStructure.Domain.Common
 {
-    public abstract class Address
+    public class Address
     {
         public int Id { get; set; }
         public string CEP { get; set; }

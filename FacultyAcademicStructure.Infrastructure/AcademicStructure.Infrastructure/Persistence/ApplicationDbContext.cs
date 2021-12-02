@@ -7,15 +7,16 @@ using System.Threading.Tasks;
 
 namespace AcademicStructure.Infrastructure.Persistence
 {
-    public class ApplicationDataBContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
-        public ApplicationDataBContext(DbContextOptions<ApplicationDataBContext> options) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
 
         public DbSet<Student> DbStudents { get; set; }
         public DbSet<Teacher> DbTeachers { get; set; }
         public DbSet<ClassRoom> DbClassRooms { get; set; }
+        public DbSet<Address> Addresses { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
