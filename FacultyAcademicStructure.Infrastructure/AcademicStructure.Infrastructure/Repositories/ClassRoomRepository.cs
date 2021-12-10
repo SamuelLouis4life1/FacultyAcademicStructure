@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace AcademicStructure.Infrastructure.Repositories
 {
-    public class ClassRoomRepository : RepositoryBase<ClassRoom>, IClassRoomRepository
+    public class ClassRoomRepository : RepositoryBase<SchoolClass>, IClassRoomRepository
     {
         public ClassRoomRepository(ApplicationDbContext dbContext) : base(dbContext)
         {
         }
 
-        public async Task<IEnumerable<ClassRoom>> GetClassRoomByName(string classRoomName)
+        public async Task<IEnumerable<SchoolClass>> GetClassRoomByName(string classRoomName)
         {
             var classRoomList = await _dbContext.DbClassRooms
                                 .Where(o => o.ClassName == classRoomName)

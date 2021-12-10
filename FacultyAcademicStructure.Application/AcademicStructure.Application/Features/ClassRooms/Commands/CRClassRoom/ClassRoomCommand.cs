@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using AcademicStructure.Domain.Entities;
+using AcademicStructure.Domain.Enums;
+using MediatR;
 using System;
 
 
@@ -6,12 +8,11 @@ namespace AcademicStructure.Application.Features.ClassRooms.Commands.CRClassRoom
 {
     public class ClassRoomCommand : IRequest<int>
     {
-        public string ClassRoomName { get; set; }
-        public DateTime StartedAt { get; set; }
-        public DateTime FinishAt { get; set; }
-        public DateTime DateOfClass { get; set; }
-        public DateTime FirstDateOfClass { get; set; }
-        public DateTime LastDateOfClass { get; set; }
-        public DateTime? LastModifiedDate { get; set; }
+        //public int Id { get; set; }
+        public int DayOfTheWeek { get; set; }
+        public DayPeriodEnum DayPeriod { get; set; }
+        public Teacher Teacher { get; set; }
+        public SchoolClass SchoolClass { get; set; }
+        public SchoolSubject SchoolSubject { get; set; }
     }
 }

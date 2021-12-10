@@ -1,8 +1,11 @@
 ﻿1) https://stackoverflow.com/questions/58290154/implementing-a-base-entity-class-when-not-all-entities-have-an-id-property-in-as
 2) https://stackoverflow.com/questions/46978332/use-ientitytypeconfiguration-with-a-base-entity
 3) https://enlabsoftware.com/development/how-to-implement-repository-unit-of-work-design-patterns-in-dot-net-core-practical-examples-part-one.html
-4) 
-5) 
-6) 
+4) https://github.com/dotnet-architecture/eShopOnContainers
+5) https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src
+6) https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/src/Tests/Services/Application.FunctionalTests
 7) 
+8) 
+9) 
+10) 
 

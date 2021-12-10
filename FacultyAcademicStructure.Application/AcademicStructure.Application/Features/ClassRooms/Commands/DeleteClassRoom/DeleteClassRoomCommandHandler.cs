@@ -28,7 +28,7 @@ namespace AcademicStructure.Application.Features.ClassRooms.Commands.DeleteClass
             var studentToDelete = await _classRoomRepository.GetByIdAsync(request.Id);
             if (studentToDelete == null)
             {
-                throw new NotFoundException(nameof(ClassRoom), request.Id);
+                throw new NotFoundException(nameof(SchoolClass), request.Id);
             }
 
             await _classRoomRepository.DeleteAsync(studentToDelete);

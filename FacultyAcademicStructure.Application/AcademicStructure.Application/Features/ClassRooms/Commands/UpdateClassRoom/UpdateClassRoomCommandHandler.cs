@@ -31,10 +31,10 @@ namespace AcademicStructure.Application.Features.ClassRooms.Commands.UpdateClass
             var classRoomToUpdate = await _classRoomRepository.GetByIdAsync(request.Id);
             if (classRoomToUpdate == null)
             {
-                throw new NotFoundException(nameof(ClassRoom), request.Id);
+                throw new NotFoundException(nameof(SchoolClass), request.Id);
             }
 
-            _mapper.Map(request, classRoomToUpdate, typeof(UpdateClassRoomCommand), typeof(ClassRoom));
+            _mapper.Map(request, classRoomToUpdate, typeof(UpdateClassRoomCommand), typeof(SchoolClass));
 
             await _classRoomRepository.UpdateAsync(classRoomToUpdate);
 

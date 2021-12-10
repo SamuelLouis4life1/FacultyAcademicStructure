@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace AcademicStructure.Application.Contracts.Persistence
 {
-    public interface IClassRoomRepository : IAsyncRepository<ClassRoom>
+    public interface IClassRoomRepository : IAsyncRepository<SchoolClass>
     {
-        Task<IEnumerable<ClassRoom>> GetClassRoomByName(string classRoomName);
+        Task<IEnumerable<SchoolClass>> GetClassRoomByName(string classRoomName);
     }
 }

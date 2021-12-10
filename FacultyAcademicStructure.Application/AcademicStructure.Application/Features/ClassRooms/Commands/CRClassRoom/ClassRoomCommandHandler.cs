@@ -31,7 +31,7 @@ namespace AcademicStructure.Application.Features.ClassRooms.Commands.CRClassRoom
 
         public async Task<int> Handle(ClassRoomCommand request, CancellationToken cancellationToken)
         {
-            var classEntity = _mapper.Map<ClassRoom>(request);
+            var classEntity = _mapper.Map<SchoolClass>(request);
             var newclass = await _classRoomRepository.AddAsync(classEntity);
 
             _logger.LogInformation($"ClassRoom {newclass.Id} is successfully created.");
@@ -41,7 +41,7 @@ namespace AcademicStructure.Application.Features.ClassRooms.Commands.CRClassRoom
             return newclass.Id;
         }
 
-        private async Task SendMail(ClassRoom classRoom)
+        private async Task SendMail(SchoolClass classRoom)
         {
             var email = new Email() { To = "samuel.louis@al.infnet.edu.br", Body = $"classRoom was created.", Subject = "Student was created" };
 

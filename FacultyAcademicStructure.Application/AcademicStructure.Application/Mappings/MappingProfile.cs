@@ -28,9 +28,9 @@ namespace AcademicStructure.Application.Mappings
 
 
             // ClassRoom
-            CreateMap<ClassRoom, ClassRoomVm>().ReverseMap();
-            CreateMap<ClassRoom, ClassRoomCommand>().ReverseMap();
-            CreateMap<ClassRoom, UpdateClassRoomCommand>().ReverseMap();
+            CreateMap<SchoolClass, ClassRoomVm>().ReverseMap();
+            CreateMap<SchoolClass, ClassRoomCommand>().ReverseMap();
+            CreateMap<SchoolClass, UpdateClassRoomCommand>().ReverseMap();
         }
     }
 }

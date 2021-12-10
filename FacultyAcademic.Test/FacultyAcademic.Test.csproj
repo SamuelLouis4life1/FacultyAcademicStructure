@@ -19,4 +19,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FacultyAcademicStructure.Api\AcademicStructure.Api\AcademicStructure.Api.csproj" />
+    <ProjectReference Include="..\FacultyAcademicStructure.Application\AcademicStructure.Application\AcademicStructure.Application.csproj" />
+    <ProjectReference Include="..\FacultyAcademicStructure.Infrastructure\AcademicStructure.Infrastructure\AcademicStructure.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

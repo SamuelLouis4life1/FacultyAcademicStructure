@@ -40,11 +40,11 @@ namespace AcademicStructure.Infrastructure.Persistence
             };
         }     
         
-        private static IEnumerable<ClassRoom> GetPreconfiguredClassRooms()
+        private static IEnumerable<SchoolClass> GetPreconfiguredClassRooms()
         {
-            return new List<ClassRoom>
+            return new List<SchoolClass>
             {
-                new ClassRoom() {ClassName = "Formatura" }
+                new SchoolClass() {ClassName = "Formatura" }
             };
         }
 

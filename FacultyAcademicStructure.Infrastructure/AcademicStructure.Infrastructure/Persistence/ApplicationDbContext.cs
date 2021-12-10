@@ -15,7 +15,7 @@ namespace AcademicStructure.Infrastructure.Persistence
 
         public DbSet<Student> DbStudents { get; set; }
         public DbSet<Teacher> DbTeachers { get; set; }
-        public DbSet<ClassRoom> DbClassRooms { get; set; }
+        public DbSet<SchoolClass> DbClassRooms { get; set; }
         public DbSet<Address> Addresses { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
@@ -25,12 +25,12 @@ namespace AcademicStructure.Infrastructure.Persistence
                 switch (entry.State)
                 {
                     case EntityState.Added:
-                        entry.Entity.CreatedDate = DateTime.Now;
-                        entry.Entity.CreatedBy = "Sampeur";
+                        //entry.Entity.CreatedDate = DateTime.Now;
+                        //entry.Entity.CreatedBy = "Sampeur";
                         break;
                     case EntityState.Modified:
-                        entry.Entity.LastModifiedDate = DateTime.Now;
-                        entry.Entity.LastModifiedBy = "Sampeur";
+                        //entry.Entity.LastModifiedDate = DateTime.Now;
+                        //entry.Entity.LastModifiedBy = "Sampeur";
                         break;
                 }
             }
