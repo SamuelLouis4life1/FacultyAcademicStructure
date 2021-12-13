@@ -1,20 +1,18 @@
 ﻿using AcademicStructure.Domain.Common;
-using System;
+using AcademicStructure.Domain.Entities;
+using AcademicStructure.Domain.Enums;
 
 
 namespace AcademicStructure.Application.Features.Students.Queries.GetTeachersList
 {
     public class StudentVm
     {
-        public string FullName { get; set; }
-        public string CPF { get; set; }
-        public string Email { get; set; }
-        public DateTime DataCadastro { get; set; }
-        public bool StudentOrTeacher { get; set; }
-        public long PhoneNumber { get; set; }
-        public DateTime Birthday { get; set; }
-        public Address Address { get; set; }
-        public int Matricula { get; set; }
-        public bool Ativo { get; set; }
+        public int Id { get; set; }
+        public string ClassName { get; set; }
+        public int DayOfTheWeek { get; set; }
+        public DayPeriodEnum DayPeriod { get; set; }
+        public Teacher Teacher { get; set; }
+        public SchoolClass SchoolClass { get; set; }
+        public SchoolSubject SchoolSubject { get; set; }
     }
 }

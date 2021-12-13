@@ -18,7 +18,7 @@ namespace AcademicStructure.Infrastructure.Repositories
         public async Task<IEnumerable<Teacher>> GetTeacherByName(string teacherName)
         {
             var teacherList = await _dbContext.DbTeachers
-                                .Where(o => o.FullName == teacherName)
+                                .Where(o => o.Person.Name == teacherName)
                                 .ToListAsync();
             return teacherList;
         }

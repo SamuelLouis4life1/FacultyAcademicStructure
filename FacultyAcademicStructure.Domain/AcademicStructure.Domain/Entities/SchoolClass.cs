@@ -7,9 +7,13 @@ namespace AcademicStructure.Domain.Entities
 
     public class SchoolClass : EntityBase
     {
-        //public int Id { get; set; }
-        public string ClassName { get; set; }
-        public bool Ativo { get; set; }
-        public IEnumerable<Student> Students { get; set; }
+        public int TeacherId { get; set; }
+        public int SchoolSubjectId { get; set; }
+        public string Name { get; set; }
+
+        public virtual Teacher Teacher { get; set; }
+        public virtual SchoolSubject SchoolSubject { get; set; }
+        public virtual ICollection<SchoolClassStudent> SchoolClassStudents { get; set; }
+        public virtual ICollection<SchoolClassDate> SchoolClassDates { get; set; }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using AcademicStructure.Domain.Common;
+using AcademicStructure.Domain.Entities;
 using MediatR;
 using System;
+using System.Collections.Generic;
 
 
 namespace AcademicStructure.Application.Features.Teachers.Commands.CheckoutTeacher
@@ -11,11 +13,11 @@ namespace AcademicStructure.Application.Features.Teachers.Commands.CheckoutTeach
         public string CPF { get; set; }
         public string Email { get; set; }
         public DateTime DataCadastro { get; set; }
-        public bool StudentOrTeacher { get; set; }
         public long PhoneNumber { get; set; }
         public DateTime Birthday { get; set; }
-        public Address Address { get; set; }
         public int Matricula { get; set; }
-        public bool Ativo { get; set; }
+        public virtual Address Address { get; set; }
+        public virtual ICollection<SchoolClass> SchoolClasses { get; set; }
+        public virtual ICollection<Student> Student { get; set; }
     }
 }

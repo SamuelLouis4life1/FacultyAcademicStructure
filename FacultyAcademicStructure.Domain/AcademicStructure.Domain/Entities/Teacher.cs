@@ -1,5 +1,4 @@
 ﻿using AcademicStructure.Domain.Common;
-using System;
 using System.Collections.Generic;
 
 
@@ -7,19 +6,9 @@ namespace AcademicStructure.Domain.Entities
 {
     public class Teacher : EntityBase
     {
-        //public int Id { get; set; }
-        //public string FullName { get; set; }
-        public string CPF { get; set; }
-        public string Email { get; set; }
-        public DateTime DataCadastro { get; set; }
-        public bool StudentOrTeacher { get; set; }
-        public long PhoneNumber { get; set; }
-        public DateTime Birthday { get; set; }
-        public int Matricula { get; set; }
-        //public bool Ativo { get; set; }
-        public Address Address { get; set; }
-        public IEnumerable<SchoolClass> ClassRooms { get; set; }
-        public IEnumerable<Student> Student { get; set; }
+        public int PersonId { get; set; }
 
+        public virtual ICollection<SchoolClass> SchoolClasses { get; set; }
+        public virtual Person Person { get; set; }
     }
 }
