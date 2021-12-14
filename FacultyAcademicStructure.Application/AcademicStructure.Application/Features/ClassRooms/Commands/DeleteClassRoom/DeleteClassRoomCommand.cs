@@ -1,10 +1,10 @@
 ﻿using MediatR;
-
+using System;
 
 namespace AcademicStructure.Application.Features.ClassRooms.Commands.DeleteClassRoom
 {
     public class DeleteClassRoomCommand : IRequest
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
     }
 }

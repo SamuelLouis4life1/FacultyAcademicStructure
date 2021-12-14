@@ -11,13 +11,13 @@ namespace AcademicStructure.Infrastructure.Persistence
     {
         public static async Task SeedAsync(ApplicationDbContext applicationDbContext, ILogger<ApplicationContextSeed> logger)
         {
-            if (!applicationDbContext.DbStudents.Any() || 
-                applicationDbContext.DbTeachers.Any() || 
-                applicationDbContext.DbClassRooms.Any())
+            if (!applicationDbContext.Students.Any() || 
+                applicationDbContext.Teachers.Any() || 
+                applicationDbContext.ClassRooms.Any())
             {
-                applicationDbContext.DbStudents.AddRange(GetPreconfiguredStudents());
-                applicationDbContext.DbTeachers.AddRange(GetPreconfiguredTeachers());
-                applicationDbContext.DbClassRooms.AddRange(GetPreconfiguredClassRooms());
+                applicationDbContext.Students.AddRange(GetPreconfiguredStudents());
+                applicationDbContext.Teachers.AddRange(GetPreconfiguredTeachers());
+                applicationDbContext.ClassRooms.AddRange(GetPreconfiguredClassRooms());
                 await applicationDbContext.SaveChangesAsync();
 
                 logger.LogInformation("Seed database associated with context {DbContextName}", typeof(ApplicationDbContext).Name);

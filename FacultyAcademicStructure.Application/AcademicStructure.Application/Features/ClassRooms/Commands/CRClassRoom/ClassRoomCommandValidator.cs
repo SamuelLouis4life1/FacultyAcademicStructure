@@ -7,7 +7,7 @@ namespace AcademicStructure.Application.Features.ClassRooms.Commands.CRClassRoom
     {
         public ClassRoomCommandValidator()
         {
-            RuleFor(p => p.ClassRoomName)
+            RuleFor(p => p.ClassName)
                 .NotEmpty().WithMessage("{ClassRoomName} is required.")
                 .NotNull()
                 .MaximumLength(50).WithMessage("{ClassRoomName} must not exceed 50 characters.");

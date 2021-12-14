@@ -14,9 +14,9 @@ namespace AcademicStructure.Application.Features.ClassRooms.Commands.DeleteClass
     {
         private readonly IClassRoomRepository _classRoomRepository;
         private readonly IMapper _mapper;
-        private readonly ILogger<DeleteStudentCommandHandler> _logger;
+        private readonly ILogger<DeleteClassRoomCommandHandler> _logger;
 
-        public DeleteClassRoomCommandHandler(IClassRoomRepository classRoomRepository, IMapper mapper, ILogger<DeleteStudentCommandHandler> logger)
+        public DeleteClassRoomCommandHandler(IClassRoomRepository classRoomRepository, IMapper mapper, ILogger<DeleteClassRoomCommandHandler> logger)
         {
             _classRoomRepository = classRoomRepository;
             _mapper = mapper;

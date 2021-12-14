@@ -17,7 +17,7 @@ namespace AcademicStructure.Infrastructure.Repositories
 
         public async Task<IEnumerable<ClassRoom>> GetClassRoomByName(string classRoomName)
         {
-            var classRoomList = await _dbContext.DbClassRooms
+            var classRoomList = await _dbContext.ClassRooms
                                 .Where(o => o.ClassName == classRoomName)
                                 .ToListAsync();
             return classRoomList;

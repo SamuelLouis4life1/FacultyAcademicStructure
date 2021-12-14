@@ -13,9 +13,9 @@ namespace AcademicStructure.Infrastructure.Persistence
         {
         }
 
-        public DbSet<Student> DbStudents { get; set; }
-        public DbSet<Teacher> DbTeachers { get; set; }
-        public DbSet<ClassRoom> DbClassRooms { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<ClassRoom> ClassRooms { get; set; }
         public DbSet<Address> Addresses { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
