@@ -61,10 +61,10 @@ namespace AcademicStructure.Infrastructure.Repositories
         }
 
 
-        public virtual async Task<T> GetByIdAsync(int id)
-        {
-            return await _dbContext.Set<T>().FindAsync(id);
-        }
+        //public virtual async Task<T> GetByIdAsync(int id)
+        //{
+        //    return await _dbContext.Set<T>().FindAsync(id);
+        //}
 
         // Create 
         public async Task<T> AddAsync(T entity)
@@ -85,6 +85,11 @@ namespace AcademicStructure.Infrastructure.Repositories
         {
             _dbContext.Set<T>().Remove(entity);
             await _dbContext.SaveChangesAsync();
+        }
+
+        public virtual async Task<T> GetByIdAsync(Guid id)
+        {
+            return await _dbContext.Set<T>().FindAsync(id);
         }
     }
 }

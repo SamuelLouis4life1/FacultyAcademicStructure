@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace AcademicStructure.Application.Features.Students.Commands.CheckoutStudent
 {
-    public class StudentCommandHandler : IRequestHandler<StudentCommand, int>
+    public class StudentCommandHandler : IRequestHandler<StudentCommand, Guid>
     {
         private readonly IStudentRepository _studentRepository;
         private readonly IMapper _mapper;
@@ -26,7 +26,7 @@ namespace AcademicStructure.Application.Features.Students.Commands.CheckoutStude
             _logger = logger;
         }
 
-        public async Task<int> Handle(StudentCommand request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(StudentCommand request, CancellationToken cancellationToken)
         {
             var studentEntity = _mapper.Map<Student>(request);
             var newStudent = await _studentRepository.AddAsync(studentEntity);

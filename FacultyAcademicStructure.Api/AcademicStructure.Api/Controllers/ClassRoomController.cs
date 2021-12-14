@@ -60,7 +60,7 @@ namespace AcademicStructure.Api.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesDefaultResponseType]
-        public async Task<ActionResult> DeleteClassRoom(int id)
+        public async Task<ActionResult> DeleteClassRoom(Guid id)
         {
             var command = new DeleteClassRoomCommand() { Id = id };
             await _mediator.Send(command);

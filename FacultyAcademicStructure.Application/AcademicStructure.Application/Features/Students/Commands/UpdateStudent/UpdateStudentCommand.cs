@@ -7,7 +7,7 @@ namespace AcademicStructure.Application.Features.Students.Commands.UpdateStudent
 {
     public class UpdateStudentCommand : IRequest
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string FullName { get; set; }
         public string CPF { get; set; }
         public string Email { get; set; }

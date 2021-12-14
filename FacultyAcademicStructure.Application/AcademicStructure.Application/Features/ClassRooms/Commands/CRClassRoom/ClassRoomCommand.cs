@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace AcademicStructure.Application.Features.ClassRooms.Commands.CRClassRoom
 {
-    public class ClassRoomCommand : IRequest<int>
+    public class ClassRoomCommand : IRequest<Guid>
     {
         public Guid Id { get; set; }
         public string ClassName { get; set; }

@@ -1,10 +1,11 @@
 ﻿using MediatR;
+using System;
 
 
 namespace AcademicStructure.Application.Features.Students.Commands.DeleteStudent
 {
     public class DeleteStudentCommand : IRequest
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
     }
 }

@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace AcademicStructure.Application.Features.ClassRooms.Commands.CRClassRoom
 {
-    public class ClassRoomCommandHandler : IRequestHandler<ClassRoomCommand, int>
+    public class ClassRoomCommandHandler : IRequestHandler<ClassRoomCommand, Guid>
     {
         private readonly IClassRoomRepository _classRoomRepository;
         private readonly IMapper _mapper;
@@ -29,7 +29,7 @@ namespace AcademicStructure.Application.Features.ClassRooms.Commands.CRClassRoom
             _logger = logger;
         }
 
-        public async Task<int> Handle(ClassRoomCommand request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(ClassRoomCommand request, CancellationToken cancellationToken)
         {
             var classEntity = _mapper.Map<ClassRoom>(request);
             var newclass = await _classRoomRepository.AddAsync(classEntity);

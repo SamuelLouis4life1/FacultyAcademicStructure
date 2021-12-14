@@ -59,7 +59,7 @@ namespace AcademicStructure.Api.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesDefaultResponseType]
-        public async Task<ActionResult> DeleteStudent(int id)
+        public async Task<ActionResult> DeleteStudent(Guid id)
         {
             var command = new DeleteStudentCommand() { Id = id };
             await _mediator.Send(command);

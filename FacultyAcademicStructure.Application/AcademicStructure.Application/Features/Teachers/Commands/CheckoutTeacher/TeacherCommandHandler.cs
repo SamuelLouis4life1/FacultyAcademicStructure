@@ -9,9 +9,10 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
+
 namespace AcademicStructure.Application.Features.Teachers.Commands.CheckoutTeacher
 {
-    public class TeacherCommandHandler : IRequestHandler<TeacherCommand, int>
+    public class TeacherCommandHandler : IRequestHandler<TeacherCommand, Guid>
     {
 
         private readonly ITeacherRepository _teacherRepository;
@@ -27,7 +28,7 @@ namespace AcademicStructure.Application.Features.Teachers.Commands.CheckoutTeach
             _logger = logger;
         }
 
-        public async Task<int> Handle(TeacherCommand request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(TeacherCommand request, CancellationToken cancellationToken)
         {
             var teacherEntity = _mapper.Map<Teacher>(request);
             var newTeacher = await _teacherRepository.AddAsync(teacherEntity);

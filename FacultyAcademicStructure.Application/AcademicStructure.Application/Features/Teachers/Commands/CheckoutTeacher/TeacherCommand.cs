@@ -5,7 +5,7 @@ using System;
 
 namespace AcademicStructure.Application.Features.Teachers.Commands.CheckoutTeacher
 {
-    public class TeacherCommand : IRequest<int>
+    public class TeacherCommand : IRequest<Guid>
     {
         public string FullName { get; set; }
         public string CPF { get; set; }
